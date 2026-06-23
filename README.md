@@ -89,7 +89,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <h4> <a href="[https://github.com/rzkinhfiz/Sumbawa_agriculture_commodity_price_prediction](https://github.com/Rakamin-Finalproject-DS4/E-Commerce-Customer-Churn-Data-Explorer)">🛒 E-Commerce Customer Churn Prediction</h4>
+    <h4> <a href="https://github.com/Rakamin-Finalproject-DS4/E-Commerce-Customer-Churn-Data-Explorer">🛒 E-Commerce Customer Churn Prediction</h4>
     Benchmarked 5 classification algorithms; XGBoost achieved 96% accuracy and 0.93 ROC-AUC, delivering actionable churn-risk scores for retention strategy. <b>Best Final Project — Rakamin Academy 2023.</b>
     <br><br>
     <code>XGBoost</code> <code>scikit-learn</code> <code>Jupyter</code>
