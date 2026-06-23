@@ -2,6 +2,7 @@
 <h3 align="center">Data Scientist | AI/ML Engineer | Federated Learning Enthusiast</h3>
 
 <p align="center">
+  <a href="LINK_RESUME_KAMU"><img src="https://img.shields.io/badge/Resume-FF6F00?style=for-the-badge&logo=readthedocs&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/rizki-nurhafizd/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://rzkinhfiz-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
   <a href="mailto:hafizachmad13@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
@@ -20,6 +21,17 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 - 💼 Open to **Data Scientist / Data Analyst / AI Engineer / ML Engineer / Data Engineer** roles
 - 📫 Reach me at **hafizachmad13@gmail.com**
 - 🌐 Portfolio: **[rzkinhfiz-portfolio.vercel.app](https://rzkinhfiz-portfolio.vercel.app/)**
+
+#### 🧠 Core Competencies
+
+| Domain | Skills |
+|---|---|
+| **Machine Learning & Deep Learning** | Supervised Learning (Regression, Classification), Random Forest, XGBoost, LSTM, Hyperparameter Optimization (Optuna), Feature Engineering |
+| **Federated Learning** | FedAvg Aggregation, Non-IID Data Handling, Privacy-Preserving ML, Distributed Model Training, Flower Framework |
+| **Time-Series Forecasting** | Multi-horizon Forecasting (1–365 days), Univariate & Multivariate Modeling, Seasonality & Trend Decomposition |
+| **MLOps & Deployment** | Docker, Kubernetes (Multi-node, RBAC), Model Serialization, CI-ready Pipelines, Cloud Deployment (Streamlit Cloud) |
+| **Data Engineering & ETL** | Web Scraping (Playwright), Data Pipeline Design, Multi-format Export (JSON, Parquet, PostgreSQL), Data Cleaning at Scale |
+| **Analytics & Visualization** | Exploratory Data Analysis, Google Looker Studio, Streamlit Dashboards, Statistical Evaluation (MAPE, RMSE, ROC-AUC) |
 
 ---
 
@@ -67,7 +79,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
     <code>PyTorch</code> <code>Flower</code> <code>LSTM</code> <code>Docker</code> <code>Kubernetes</code>
   </td>
   <td width="50%" valign="top">
-    <h4> <a href="https://github.com/rzkinhfiz/Sumbawa_agriculture_commodity_price_prediction">🌾 Agricultural Commodity Price Forecasting</h4>
+    <h4>🌾 <a href="https://github.com/rzkinhfiz/Sumbawa_agriculture_commodity_price_prediction">Agricultural Commodity Price Forecasting</a></h4>
     LSTM-based price forecasting (1–365 day horizon) for 4 staple commodities in Sumbawa district. MAPE 0.88%, MAE 44 Rp/kg. Adopted by the local agricultural office, supporting 77,496+ farming households.
     <br><br>
     <code>PyTorch</code> <code>RAPIDS cuDF</code> <code>Optuna</code> <code>Streamlit</code> <code>Docker</code>
@@ -81,7 +93,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
     <code>scikit-learn</code> <code>Random Forest</code> <code>Streamlit</code>
   </td>
   <td width="50%" valign="top">
-    <h4> <a href="https://github.com/rzkinhfiz/jobstreet_webscraper">🕸️ Automated JobStreet Data Collector</h4>
+    <h4>🕸️ <a href="https://github.com/rzkinhfiz/jobstreet_webscraper">Automated JobStreet Data Collector</a></h4>
     Production-ready Playwright scraper with anti-detection techniques, robust Indonesian salary parsing (20+ formats), and multi-format export (JSON, Parquet, PostgreSQL).
     <br><br>
     <code>Python</code> <code>Playwright</code> <code>ETL</code>
@@ -89,7 +101,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <h4> <a href="https://github.com/Rakamin-Finalproject-DS4/E-Commerce-Customer-Churn-Data-Explorer">🛒 E-Commerce Customer Churn Prediction</h4>
+    <h4>🛒 <a href="https://github.com/Rakamin-Finalproject-DS4/E-Commerce-Customer-Churn-Data-Explorer">E-Commerce Customer Churn Prediction</a></h4>
     Benchmarked 5 classification algorithms; XGBoost achieved 96% accuracy and 0.93 ROC-AUC, delivering actionable churn-risk scores for retention strategy. <b>Best Final Project — Rakamin Academy 2023.</b>
     <br><br>
     <code>XGBoost</code> <code>scikit-learn</code> <code>Jupyter</code>
@@ -107,15 +119,51 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 
 ---
 
+### 🔐 Federated Learning Architecture — Data Privacy Flow
+
+A simplified view of how the **Federated Learning Weather Prediction** system keeps raw data local while still training a shared global model:
+
+```mermaid
+flowchart LR
+    subgraph Nodes["🏙️ Local Data Nodes (15 Cities)"]
+        N1["Node 1<br/>Local Weather Data<br/>+ Local LSTM"]
+        N2["Node 2<br/>Local Weather Data<br/>+ Local LSTM"]
+        N3["Node N...<br/>Local Weather Data<br/>+ Local LSTM"]
+    end
+
+    subgraph Server["🌸 Flower Framework — Aggregation Server"]
+        AGG["FedAvg Aggregator<br/>(Weighted Average of Model Weights)"]
+    end
+
+    GM["🌍 Global Model<br/>136.5 KB · RMSE ±1.36°C"]
+
+    N1 -- "Model Weights Only<br/>(no raw data)" --> AGG
+    N2 -- "Model Weights Only<br/>(no raw data)" --> AGG
+    N3 -- "Model Weights Only<br/>(no raw data)" --> AGG
+
+    AGG -- "Aggregated Weights" --> GM
+    GM -. "Updated Global Weights<br/>broadcast each round" .-> N1
+    GM -. "Updated Global Weights<br/>broadcast each round" .-> N2
+    GM -. "Updated Global Weights<br/>broadcast each round" .-> N3
+
+    style Nodes fill:#1a1a2e,stroke:#4a90d9,color:#ffffff
+    style Server fill:#16213e,stroke:#f39c12,color:#ffffff
+    style GM fill:#0f3460,stroke:#2ecc71,color:#ffffff
+```
+
+**Key privacy principle**: raw weather data never leaves its local node — only model weight updates are exchanged, preserving **100% data privacy** while still reaching a globally accurate model (91.5% bandwidth reduction vs. centralized training).
+
+---
+
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rzkinhfiz&show_icons=true&theme=default&hide_border=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rzkinhfiz&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=rzkinhfiz&show_icons=true&theme=vscode&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rzkinhfiz&theme=vscode-dark&hide_border=true" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rzkinhfiz&layout=compact&hide_border=true" width="40%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rzkinhfiz&layout=compact&theme=vscode&hide_border=true" width="40%" />
 </p>
 
 ---
