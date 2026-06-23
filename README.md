@@ -67,7 +67,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
     <code>PyTorch</code> <code>Flower</code> <code>LSTM</code> <code>Docker</code> <code>Kubernetes</code>
   </td>
   <td width="50%" valign="top">
-    <h4>🌾 Agricultural Commodity Price Forecasting</h4>
+    <h4> <a href="https://github.com/rzkinhfiz/Sumbawa_agriculture_commodity_price_prediction">🌾 Agricultural Commodity Price Forecasting</h4>
     LSTM-based price forecasting (1–365 day horizon) for 4 staple commodities in Sumbawa district. MAPE 0.88%, MAE 44 Rp/kg. Adopted by the local agricultural office, supporting 77,496+ farming households.
     <br><br>
     <code>PyTorch</code> <code>RAPIDS cuDF</code> <code>Optuna</code> <code>Streamlit</code> <code>Docker</code>
@@ -75,13 +75,13 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <h4>💰 <a href="https://jobsalaryprediction-rzkinhfizproject.streamlit.app/">Job Salary Prediction</a></h4>
+    <h4>💰 <a href="https://github.com/rzkinhfiz/jobsalaryprediction">Job Salary Prediction</a></h4>
     Random Forest Regressor predicting job salaries from title, experience, education, and remote-work status. R² 0.97, MAPE 3.94%, deployed as a live Streamlit app.
     <br><br>
     <code>scikit-learn</code> <code>Random Forest</code> <code>Streamlit</code>
   </td>
   <td width="50%" valign="top">
-    <h4>🕸️ Automated JobStreet Data Collector</h4>
+    <h4> <a href="https://github.com/rzkinhfiz/jobstreet_webscraper">🕸️ Automated JobStreet Data Collector</h4>
     Production-ready Playwright scraper with anti-detection techniques, robust Indonesian salary parsing (20+ formats), and multi-format export (JSON, Parquet, PostgreSQL).
     <br><br>
     <code>Python</code> <code>Playwright</code> <code>ETL</code>
@@ -89,7 +89,7 @@ My recent work centers on **Federated Learning**, **time-series forecasting**, a
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <h4>🛒 E-Commerce Customer Churn Prediction</h4>
+    <h4> <a href="[https://github.com/rzkinhfiz/Sumbawa_agriculture_commodity_price_prediction](https://github.com/Rakamin-Finalproject-DS4/E-Commerce-Customer-Churn-Data-Explorer)">🛒 E-Commerce Customer Churn Prediction</h4>
     Benchmarked 5 classification algorithms; XGBoost achieved 96% accuracy and 0.93 ROC-AUC, delivering actionable churn-risk scores for retention strategy. <b>Best Final Project — Rakamin Academy 2023.</b>
     <br><br>
     <code>XGBoost</code> <code>scikit-learn</code> <code>Jupyter</code>
